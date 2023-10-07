@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255; /* white text */
+  --background-start-rgb: 45, 45, 45; /* medium dark background */
+  --background-end-rgb: 45, 45, 45; /* consistent medium dark background */
+  --accent-rgb: 70, 130, 180; /* steelblue accent */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+nav {
+  background-color: rgb(var(--accent-rgb)); /* Use accent color for navbar */
+}
+
+a, .accent {
+  color: rgb(var(--accent-rgb)); /* Use accent color for links and accent class */
+}
+
+.gradient-background {
+  position: relative;
+  padding: 20px;
+  z-index: 1;
+  border-radius: 10px; /* Add rounded edges */
+  overflow: hidden; /* Hide overflow to round the corners */
+}
+
+.gradient-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to right, /* Set the gradient direction to right */
+    rgba(35, 35, 35, 0.9), /* Slightly darker background with opacity */
+    rgba(15, 15, 15, 0.9) /* Darker background for gradient effect */
+  );
+  z-index: -1;
+  border-radius: 10px; /* Add rounded edges to the gradient */
+  background-size: 100% 100%; /* Make the gradient fit the container */
+}
+
+.flex-wrap {
+  flex-wrap: wrap; /* Allows list items to wrap to the next line */
+}
+
+.link {
+  color: #4682b4;
+  font-size: 16px;
+  line-height: 2
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+/* Apply styles to code blocks */
+pre {
+  background-color: rgb(var(--background-start-rgb)); /* Light gray background color */
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgb(var(--foreground-rgb));
+}
