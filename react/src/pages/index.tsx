@@ -1,13 +1,26 @@
 import Image from "next/image";
 import Layout from "../components/Layout";
+import { getAllPostIds, getSortedPostsData } from '../lib/blog';
 import React from "react";
-import Head from 'next/head';
+import Date from '../components/date';
+import Link from "next/link";
 import Profilepic from "../../public/img/profile.jpg";
 import GitHub from "../../public/img/github-mark-white.png";
 import LinkedIn from "../../public/img/LinkedIn.png";
 import EmailLogo from "../../public/img/emailLogo.png";
 
-const Home: React.FC = () => {
+interface PostData {
+  id: string;
+  date: string;
+  title: string;
+  description: string;
+}
+
+interface ProjectsProps {
+  allPostsData: PostData[]; // Define the type for allPostsData
+}
+
+const Home: React.FC<ProjectsProps> = ({allPostsData}) => {
   return (
     <Layout home>
       <main className="text-center">
@@ -79,10 +92,44 @@ const Home: React.FC = () => {
           </div>
         </div>
 
+        <div className="flex flex-col items-center mt-8 mb-10">
+          <div className="w-3/5 gradient-background">
+          <div className="text-xl text-center font-bold">Recent Blog Posts</div>
+            <div>
+              <ul className="flex flex-wrap">
+                {allPostsData.map(({ id, date, title,description }) => (
+                  <li key={id} className="m-10">
+                    <Link href={`/blog/${id}`} className="link">
+                      {" "}
+                      {title}{" "}
+                    </Link>
+                    <br />
+                    <small>
+                      <Date dateString={date} />
+                    </small>
+                    <div className="text-l m-3 mt-2">{description}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
         {/* TODO: Footer */}
       </main>
     </Layout>
   );
 };
+
+export async function getStaticProps(){
+  const allPostsData = getSortedPostsData();
+  const paths = getAllPostIds();
+
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
 
 export default Home;
