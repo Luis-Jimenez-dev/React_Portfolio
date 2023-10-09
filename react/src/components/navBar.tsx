@@ -1,11 +1,8 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import React from "react";
 import Route from "../components/changePage";
-import CSUMB from "../../public/img/csumb.png";
+import Logo from "../../public/img/logo.png";
 
 const navBar: React.FC = () => {
   return (
@@ -14,7 +11,7 @@ const navBar: React.FC = () => {
       <div className="space-y-7 justif-center items-center">
         <div className="flex font-bold text-5xl items-left justify-left ml-20 mt-10 space-x-3 hover:no-underline">
           <Link href="/">
-            <Image alt="CSUMB Logo" src={CSUMB} className="w-12 h-12" />
+            <Image alt="CSUMB Logo" src={Logo} className="w-12 h-12 rounded-2xl" />
           </Link>
           <Link href="/">
             Personal Portfolio

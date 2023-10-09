@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import { getAllPostIds, getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
@@ -22,7 +21,7 @@ const Projects: React.FC<ProjectsProps> = ({allPostsData}) => {
 
         <div className="flex flex-col items-center mt-8">
           <div className="w-3/5 gradient-background">
-          <div className="text-3xl text-center font-bold">School Work</div>
+          <div className="text-5xl text-center font-bold">School Work</div>
           <div className="m-5 text-center">
             During my studies at CSUMB I studied many areas of Computer Science
             Such as Networking, Operating Systems, Software Engineering and
@@ -33,7 +32,7 @@ const Projects: React.FC<ProjectsProps> = ({allPostsData}) => {
           <div>
             <ul className="mt-10 flex flex-wrap">
               {allPostsData.map(({ id, date, title }) => (
-                <li key={id} className="m-12">
+                <li key={id} className="m-10">
                   <Link href={`/posts/${id}`} className="link"> {title} </Link>
                   <br/>
                   <small>

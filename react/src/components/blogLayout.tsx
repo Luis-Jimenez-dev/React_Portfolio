@@ -22,7 +22,7 @@ export default function Layout ({ children, home} : {children:any , home:any}){
         <main>{children}</main>
         {!home &&(
             <div className="ml-20 m-10 text-l font-bold hover:underline">
-                <Link href='/schoolWork'> Back to School Work </Link>
+                <Link href='/blog'> Back to Projects </Link>
             </div>
         )}
     </div>

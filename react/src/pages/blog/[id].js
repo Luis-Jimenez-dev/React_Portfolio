@@ -1,5 +1,5 @@
-import Layout from '../../components/Layout';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import Layout from '../../components/blogLayout';
+import { getAllPostIds, getPostData } from '../../lib/blog';
 import Date from '../../components/date';
 import Head from 'next/head';
 import markdownStyles from '../../styles/markdown.module.css';
@@ -16,7 +16,7 @@ export default function Post ({ postData }) {
                 <div className='text-xl underline underline-offset-8 decoration-4 ml-2'>
                     <Date dateString={postData.date} />
                 </div>
-                <div dangerouslySetInnerHTML={{__html: postData.contentHtml}} className={`${markdownStyles.markdown} ml-20 w-5/6`}/>
+                <div dangerouslySetInnerHTML={{__html: postData.contentHtml}} className={`${markdownStyles.markdown}`}/>
             </article>
             </div>
         </Layout>

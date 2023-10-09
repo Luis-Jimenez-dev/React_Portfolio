@@ -15,5 +15,5 @@ and its societal impact. The course uses scenario based approach combining
 presentations, discussions, and reflections to allow students explore the 
 relationship between critical reelection and action on the topics mentioned above.
 
-## Research paper
+## Research paper:
 [Technology Access and Academic Performance](/TechnologyAccessandAcademicPerformance.pdf)

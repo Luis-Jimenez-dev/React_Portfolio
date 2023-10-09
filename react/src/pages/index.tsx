@@ -53,7 +53,7 @@ const Home: React.FC = () => {
           {/* Container for About Me and Description */}
           <div className="flex flex-col items-center mt-9">
             <div className="gradient-background w-3/5">
-            <div className="text-xl font-bold">
+            <div className="text-2xl font-bold">
               <h2>About Me</h2>
             </div>
             <div className="mt-4 text-lg">

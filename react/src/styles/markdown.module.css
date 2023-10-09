@@ -3,7 +3,8 @@
     /* Define your Markdown content styles here */
     font-size: 16px;
     line-height: 2;
-    padding: 40px
+    padding-left: 40px;
+    padding-top: 20px;
     /* Add other styles as needed */
   }
   
@@ -15,6 +16,11 @@
   .markdown h2 {
     /* Style for Markdown headers */
     font-size: 30px;
+  }
+
+  .markdown h3 {
+    /* Style for Markdown headers */
+    font-size: 22px;
   }
   
   .markdown p {
