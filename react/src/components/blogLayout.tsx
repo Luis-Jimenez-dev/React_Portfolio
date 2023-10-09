@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from './navBar';
+import { Analytics } from '@vercel/analytics/react';
 
 const name = "Luis Jimenez";
 export const siteTitle = "Luis Jimenez's Portfolio";
@@ -19,7 +20,10 @@ export default function Layout ({ children, home} : {children:any , home:any}){
                     <Navbar />
                 )}
         </header>
-        <main>{children}</main>
+        <main>
+            {children}
+            <Analytics />
+        </main>
         {!home &&(
             <div className="ml-20 m-10 text-l font-bold hover:underline">
                 <Link href='/blog'> Back to Blog </Link>

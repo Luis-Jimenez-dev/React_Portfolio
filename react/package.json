@@ -10,6 +10,7 @@
     "build-and-start": "run-s build start"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.1.0",
     "date-fns": "^2.30.0",
     "gray-matter": "^4.0.3",
     "next": "13.5.4",
