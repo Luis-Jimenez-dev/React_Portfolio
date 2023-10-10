@@ -1,7 +1,7 @@
 ---
 title: "Welcome to My Digital Journey"
 date: "2023-10-08"
-description: "An initial page introducing my website"
+description: "An introducing to my website and philosophy"
 ---
 
 ## Intro:

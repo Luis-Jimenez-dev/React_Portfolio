@@ -1,8 +1,8 @@
 ---
 title: "What Can We Play Today"
-description: "A web page containing information about a web application, What Can We Play Today,
-which allows users to connect and share their Steam libraries to find similar game interests. It was built
-using Express.js as the framework and SQLite as the DBMS"
+description: "The web application, What Can We Play Today,
+allows users to connect and share their Steam libraries to find similar game interests. It was built
+on the framework of Express.js and used SQLite as the DBMS"
 date: "2023-09-20"
 ---
 ### Overview:

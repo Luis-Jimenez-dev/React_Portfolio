@@ -3,6 +3,7 @@ import { getAllPostIds, getSortedPostsData } from '../lib/blog';
 import Date from '../components/date';
 import React, { useEffect } from "react";
 import Layout from "@/components/blogLayout";
+import Markdown from '../styles/markdown.module.css'
 
 interface PostData {
   id: string;
