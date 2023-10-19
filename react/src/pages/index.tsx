@@ -34,6 +34,7 @@ const Home: React.FC<ProjectsProps> = ({allPostsData}) => {
               layout="fill"
               objectFit="cover"
               className="rounded-full border border-gray-100 shadow-sm"
+              loading = "lazy"
             />
           </div>
 
